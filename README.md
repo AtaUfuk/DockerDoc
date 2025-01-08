@@ -17,4 +17,4 @@
 <span><b>docker run --name redis-test -p 5002:6379 -d redis</b><span>  
 <b>docker run -p 6379:6379 -d redis --name [your_container_name] --restart unless-stoped</b> =>6379 portunda[-p] belirtilen isme göre[--name] yeni bir container oluşturur[run](İlgili image yoksa da indirip kurar) ve docker tekrardan başlatıldığında otomatik olarak ayağa kalkmasını sağlar.[--restart unless-stoped]  
 <b style="color:blue;">docker inspect ContainerID/image </b> => Sonuna yazılan container id'si/image adına ait json formatta ayrıntılı bir bilgi dökümü sağlar.(Örneğin:docker inspect rabbitmq:3.12-management)  
-<b style="color:blue">Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform</b>
+<b style="color:blue">Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform</b> => Power Shell komutudur ve bu komut ile sanal makinenin tekrardan çalıştırılması sağlanır.
