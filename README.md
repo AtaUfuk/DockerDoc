@@ -18,3 +18,9 @@
 <b>docker run -p 6379:6379 -d redis --name [your_container_name] --restart unless-stoped</b> =>6379 portunda[-p] belirtilen isme göre[--name] yeni bir container oluşturur[run](İlgili image yoksa da indirip kurar) ve docker tekrardan başlatıldığında otomatik olarak ayağa kalkmasını sağlar.[--restart unless-stoped]  
 <b style="color:blue;">docker inspect ContainerID/image </b> => Sonuna yazılan container id'si/image adına ait json formatta ayrıntılı bir bilgi dökümü sağlar.(Örneğin:docker inspect rabbitmq:3.12-management)  
 <b style="color:blue">Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform</b> => Power Shell komutudur ve bu komut ile sanal makinenin tekrardan çalıştırılması sağlanır.
+<b>network/--net:</b> Temel işlevi, konteynerlerin birbirleriyle ve dış dünyayla olan bağlantılarını yönetmek, izole etmek veya optimize etmektir. 
+Örneğin: 
+docker network create elastic (elastic isminde bir network oluşturur)
+docker run --name kibana --net elastic -p 5601:5601 docker.elastic.co/kibana/kibana:9.3.3 çalıştırılacak container'ı --net elastic parametresi ile oluşturulan network içerisine dahil eder.
+
+
